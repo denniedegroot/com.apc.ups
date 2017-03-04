@@ -1,0 +1,8 @@
+{
+    "pair": {
+        "ipaddress": "IP Adres",
+        "ipplaceholder": "192.168.1.x",
+        "port": "Poort",
+        "start": "Volgende"
+    }
+}

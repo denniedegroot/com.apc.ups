@@ -1,0 +1,67 @@
+{
+    "id": "com.apc.ups",
+    "name": {
+        "en": "APC UPS"
+    },
+    "version": "1.0.0",
+    "compatibility": "1.x",
+    "author": {
+        "name": "Dennie de Groot",
+        "email": "mail@denniedegroot.nl",
+        "website": "https://denniedegroot.nl"
+    },
+    "description": {
+        "en": "APC UPS support for Homey",
+        "nl": "APC UPS ondersteuning voor Homey"
+    },
+    "images": {
+        "large": "./assets/images/large.jpg",
+        "small": "./assets/images/small.jpg"
+    },
+    "category": "appliances",
+    "drivers": [
+        {
+            "id": "ups",
+            "name": {
+                "en": "APC UPS",
+                "nl": "APC UPS"
+            },
+            "images": {
+                "large": "./drivers/ups/assets/images/large.jpg",
+                "small": "./drivers/ups/assets/images/small.jpg"
+            },
+            "class": "sensor",
+            "capabilities": [ "alarm_battery", "measure_battery", "measure_power", "measure_voltage.power", "measure_voltage.battery" ],
+            "capabilitiesOptions": {
+                "measure_voltage.power": {
+                    "title": {
+                        "en": "Voltage",
+                        "nl": "Voltage"
+                    }
+                },
+                "measure_voltage.battery": {
+                    "title": {
+                        "en": "Battery Voltage",
+                        "nl": "Batterij Voltage"
+                    }
+                }
+            },
+            "pair": [
+                {
+                    "id": "start"
+                },
+                {
+                    "id": "list_devices",
+                    "template": "list_devices",
+                    "navigation": {
+                        "next": "add_devices"
+                    }
+                },
+                {
+                    "id": "add_devices",
+                    "template": "add_devices"
+                }
+            ]
+        }
+    ]
+}

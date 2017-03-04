@@ -1,0 +1,29 @@
+<style type="text/css">
+    span label {
+        width: 100px
+    }
+</style>
+
+<script type="text/javascript">
+    function search() {
+        var device = {};
+        device.ip = document.getElementById('pair-ip').value;
+        device.port = document.getElementById('pair-port').value;
+
+        Homey.emit('search_devices', device, function(err, result) {
+            Homey.showView('list_devices');
+        });
+    }
+</script>
+
+<p class="form-group">
+    <span class="input-wrap">
+        <label for="pair-ip" data-i18n="pair.ipaddress"></label>
+        <input class="form-input" id="pair-ip" data-i18n-placeholder="pair.ipplaceholder" type="text" />
+
+        <label for="pair-port" data-i18n="pair.port"></label>
+        <input class="form-input" id="pair-port" type="text" value="3551" />
+    </span>
+</p>
+
+<button class="button" id="pair-search" onclick="search();" data-i18n="pair.start" />
