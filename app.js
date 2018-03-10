@@ -1,13 +1,9 @@
-"use strict";
+'use strict';
 
+const Homey = require('homey');
 const api = require('./lib/Api.js');
 
-class App {
-
-    constructor() {
-        this.init = this._onExportsInit.bind(this);
-        this._api = new api();
-    }
+class App extends Homey.App {
 
     log() {
         console.log.bind(this, '[log]').apply(this, arguments);
@@ -17,9 +13,10 @@ class App {
         console.error.bind(this, '[error]').apply(this, arguments);
     }
 
-    _onExportsInit() {
+    onInit() {
         console.log(`${Homey.manifest.id} running...`);
-        this._api.init();
+
+        this._api = new api();
     }
 
     getDevice(host, port, callback) {
@@ -28,4 +25,4 @@ class App {
 
 }
 
-module.exports = new App();
+module.exports = App;
