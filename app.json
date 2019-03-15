@@ -3,12 +3,27 @@
     "name": {
         "en": "APC UPS"
     },
-    "version": "1.0.0",
-    "compatibility": "1.x",
+    "version": "2.0.0",
+    "compatibility": "",
+    "sdk": 2,
     "author": {
         "name": "Dennie de Groot",
         "email": "mail@denniedegroot.nl",
         "website": "https://denniedegroot.nl"
+    },
+    "contributors": {
+        "developers": [{
+            "name": "Dennie de Groot",
+            "email": "mail@denniedegroot.nl",
+            "website": "https://denniedegroot.nl"
+        }]
+    },
+    "contributing": {
+        "donate": {
+            "paypal": {
+                "username": "denniedegroot"
+            }
+        }
     },
     "description": {
         "en": "APC UPS support for Homey",

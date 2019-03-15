@@ -5,3 +5,11 @@ Connect apcupsd with Homey.
 
 ## Licensing:
 * This application is subject to [these terms](https://github.com/denniedegroot/com.apc.ups/blob/master/LICENSE).
+
+---
+
+## Changelog 2.0.0:
+- SDKv2 support
+
+---
+
